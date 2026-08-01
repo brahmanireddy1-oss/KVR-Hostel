@@ -842,32 +842,47 @@
         <div class="cline"><b>Email</b> vsbn469@gmail.com</div>
         <div class="cline"><b>Address</b> Hyderabad, Telangana</div>
       </div>
-      <form id="bookingForm">
-        <div>
-          <label for="name">Full name</label>
-          <input id="name" type="text" placeholder="Your name" required>
-        </div>
-        <div>
-          <label for="phone">Phone number</label>
-          <input id="phone" type="tel" placeholder="+91" required>
-        </div>
-        <div>
-          <label for="movein">Preferred move-in date</label>
-          <input id="movein" type="date">
-        </div>
-        <div>
-          <label for="people">Number of people</label>
-          <input id="people" type="number" min="1" placeholder="1">
-        </div>
-        <div class="full">
-          <label for="message">Anything else we should know?</label>
-          <textarea id="message" placeholder="Questions, preferred visit time, etc."></textarea>
-        </div>
-        <div class="full">
-          <button type="submit" class="btn btn-primary">Send enquiry →</button>
-        </div>
-        <div class="form-status full" id="formStatus"></div>
-      </form>
+      <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="d47f0e47-69bc-4978-abeb-d6627c0e96f2">
+
+  <!-- Optional -->
+  <input type="hidden" name="subject" value="New KVR Hostel Enquiry">
+  <input type="hidden" name="from_name" value="KVR Hostel Website">
+
+  <div>
+    <label for="name">Full name</label>
+    <input id="name" name="name" type="text" placeholder="Your name" required>
+  </div>
+
+  <div>
+    <label for="phone">Phone number</label>
+    <input id="phone" name="phone" type="tel" placeholder="+91" required>
+  </div>
+
+  <div>
+    <label for="movein">Preferred move-in date</label>
+    <input id="movein" name="movein_date" type="date">
+  </div>
+
+  <div>
+    <label for="people">Number of people</label>
+    <input id="people" name="people" type="number" min="1" placeholder="1">
+  </div>
+
+  <div class="full">
+    <label for="message">Anything else we should know?</label>
+    <textarea id="message" name="message" placeholder="Questions, preferred visit time, etc."></textarea>
+  </div>
+
+  <div class="full">
+    <button type="submit" class="btn btn-primary">Send enquiry →</button>
+  </div>
+
+  <div class="form-status full" id="formStatus"></div>
+
+</form>
     </div>
   </div>
 </section>
